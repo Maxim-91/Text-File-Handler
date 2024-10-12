@@ -51,4 +51,24 @@ The **Text File Handler** is a simple LabVIEW application that demonstrates how 
 - Basic understanding of file I/O operations in LabVIEW.
 
 ## Code
+### Text File Handler.vi
 ![image](https://github.com/user-attachments/assets/228fb152-aa21-4b51-8125-a9c77dc8f12c)
+### менеджер.vi
+![image](https://github.com/user-attachments/assets/a61e362a-c3fe-4e0f-a3df-1b66d5469c79)
+![image](https://github.com/user-attachments/assets/8c2d9aa8-8763-4180-a34c-1dc26c7557e9)
+![image](https://github.com/user-attachments/assets/d691f575-f6e9-4d0d-a776-26a3452b81bf)
+![image](https://github.com/user-attachments/assets/8d70f5ab-151e-4e91-b43b-85479673105f)
+![image](https://github.com/user-attachments/assets/e7867a4f-9f1a-46d1-9a55-c8bc41bd1400)
+![image](https://github.com/user-attachments/assets/1ea3ad45-f71e-4f95-ade4-76b23c962917)
+![image](https://github.com/user-attachments/assets/223bf8ab-5765-4abf-9f63-cc8f6f4a0b87)
+
+
+
+
+
+
+
+### менеджер.vi
+![image](https://github.com/user-attachments/assets/b663013c-6ab0-4431-b6ee-1ba1c0077695)
+
+
