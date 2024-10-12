@@ -78,13 +78,5 @@ The **Text File Queue Handler** is a LabVIEW program that allows users to perfor
 ![image](https://github.com/user-attachments/assets/1ea3ad45-f71e-4f95-ade4-76b23c962917)
 ![image](https://github.com/user-attachments/assets/223bf8ab-5765-4abf-9f63-cc8f6f4a0b87)
 
-
-
-
-
-
-
-### менеджер.vi
-![image](https://github.com/user-attachments/assets/b663013c-6ab0-4431-b6ee-1ba1c0077695)
-
-
+## The appearance of the running programs
+![image](https://github.com/user-attachments/assets/9f273220-7655-420d-9b9d-e990f51c4733)
