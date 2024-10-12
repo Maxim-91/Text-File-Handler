@@ -1,54 +1,70 @@
-# Text File Handler
+# Text File Queue Handler
 
-The **Text File Handler** is a simple LabVIEW application that demonstrates how to create, append to, and read from a text file. This program is useful for basic file operations, such as writing data to a file and then retrieving it later for further processing.
+The **Text File Queue Handler** is a LabVIEW program that allows users to perform various operations on text files while utilizing a queue system for managing tasks. This program supports operations like creating files, appending data, reading content, clearing files, and deleting files. The queue functionality ensures that tasks are processed sequentially, making it ideal for applications where multiple operations need to be performed on text files in an orderly manner.
 
 ## Key Features
 
-1. **File Creation**:
-   - The program creates a new text file if it doesn't already exist.
-   - If a file already exists, the program can append new data to the existing content.
+1. **Queue System for File Operations**:
+   - The program uses a queue system to manage file tasks such as creating, appending, reading, clearing, and deleting files.
+   - Tasks are processed one at a time, preventing conflicts between operations.
 
-2. **Data Appending**:
-   - Allows users to write additional text to the file without overwriting the previous content.
-   - This feature is essential when dealing with data logging, where new entries are added over time.
+2. **File Creation and Data Handling**:
+   - Users can create a new text file or append data to the existing file.
+   - The program supports both appending to the beginning and the end of the file.
 
-3. **File Reading**:
-   - Once the file has been updated, the program reads the content and displays it.
-   - This helps users to verify that the correct data was written to the file.
+3. **Reading and Modifying Files**:
+   - After appending or modifying the file, the program can read and display its content.
+   - The program also allows clearing the content of the file or deleting it entirely.
+
+4. **Task Management**:
+   - Each file operation (e.g., create, append, read, clear, delete) is managed as a task in the queue.
+   - The queue ensures that only one task is executed at a time, maintaining data integrity.
 
 ## Program Workflow
 
-1. **Text Input**:
-   - The user enters a string of text into the input field (labeled as "тут текст" in the diagram).
+1. **Task Input**:
+   - The user selects a file operation using the `task` control (e.g., "создать" to create, "добавить в конец" to append, etc.).
+   - The `дані` input provides the data for the task, such as the text to append.
 
-2. **Create or Append**:
-   - The first function checks if a file needs to be created or if it should append to an existing file.
-   - If the file doesn't exist, it is created. If it exists, the new text is appended to the end.
+2. **Queue Operations**:
+   - The selected task is added to the task queue.
+   - Each task is processed in the order it was queued, ensuring operations like file creation, appending, reading, and deletion are handled in sequence.
 
-3. **Read the File**:
-   - After writing the text, the file is immediately read, and the content is loaded into the program's `data` variable.
-   - The data is then available for further use or display.
+3. **File Manipulation**:
+   - Depending on the selected task, the program either creates a file, appends data, reads the file content, clears the file, or deletes it.
+   - After each operation, the program outputs the updated file content or the result of the task.
+
+## Supported Tasks
+
+- **создать (Create)**: Creates a new text file or opens an existing one.
+- **добавить в начало (Append to Start)**: Adds text to the beginning of the file.
+- **добавить в конец (Append to End)**: Adds text to the end of the file.
+- **считать (Read)**: Reads and outputs the content of the file.
+- **очистить (Clear)**: Clears the content of the file, leaving it empty.
+- **удалить (Delete)**: Deletes the file entirely.
 
 ## Inputs and Outputs
 
 - **Inputs**:
-  - User input string (the text entered into the "тут текст" field).
-
+  - `task`: Specifies the file operation to perform (create, append, read, clear, or delete).
+  - `дані`: Provides the text data for the operation (e.g., for appending or creating files).
+  
 - **Outputs**:
-  - The program writes the input string into a text file.
-  - After writing, it reads the updated content of the file and displays it in the `data` output variable.
+  - `queue out`: Shows the queue of tasks waiting to be processed.
+  - `дані вихід`: Outputs the result of the file operation, such as the updated content of the file or confirmation of task completion.
 
 ## How to Use
 
 1. Run the program in LabVIEW.
-2. Enter the desired text into the input field.
-3. The program will create a new file (if not already existing) or append the input text to the file.
-4. After writing the text, the program reads the entire file and updates the `data` output.
-   
+2. Select a task from the `task` dropdown menu (create, append, read, etc.).
+3. Input the text (if necessary) into the `дані` field.
+4. The task is added to the queue and processed sequentially.
+5. The result of the task (e.g., file content) is displayed in the `дані вихід` field.
+
 ## Requirements
 
 - **LabVIEW** version XX.X or later.
-- Basic understanding of file I/O operations in LabVIEW.
+- Basic understanding of file I/O operations and queues in LabVIEW.
 
 ## Code
 ### Text File Handler.vi
